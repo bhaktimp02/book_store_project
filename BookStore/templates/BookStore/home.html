@@ -1,0 +1,100 @@
+
+  {% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Book House 📚🏠</title>  
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">	 
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+
+<!-- Header -->
+  <ul class="nav">
+      <img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85">  
+      <li class="nav-item"><a href="#" class="nav-link">Sign In</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Cart 🛒</a></li>
+  </ul>  	
+<!--Header Ends-->
+
+<!-- Search toolbar -->
+<div class="container-fluid">
+  <ul class="nav">
+    <li class="nav-item"><a href="#" class="nav-link">Store</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+    <form action="">
+      <input type="text" placeholder="Search" name="search"> 
+      <button type="submit"><i class="fa fa-search"></i></button> 
+    </form>  
+  </ul>
+</div>
+<!-- Ends -->
+
+
+<!-- Image Display -->
+  <div class="column">
+    <img src="{% static 'book7.jpeg' %}" alt="" style="width:100%">
+    <h3 style="color:red;">We Never Asked For Wings</h3>
+    <h5>Vanessa Diffenbaugh</h5>
+  </div>
+  <div class="column">
+    <img src="{% static 'book5.jpeg' %}" alt="" style="width:100%">
+    <h3 style="color:red;">Harry Potter</h3>
+    <h5>J K Rowling</h5>
+  </div>
+  <div class="column">
+    <img src="{% static 'book1.jpeg' %}" alt="" style="width:100%">
+    <h3 style="color:red;">Transcendence </h3>
+    <h5>A.P.J Abdul Kalam with Arun Tiwari</h5>
+  </div>
+<!--Image Display Ends -->
+
+<!-- Footer Starts -->               
+    <div class="container">
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-secondary">                     
+            <h2>Contact</h2>
+            <div class="b"> 123 Main St Newyork NY 12345  
+            </div>
+            <hr/>           
+            <input type="text" placeholder="Email address" name="mail" required>
+            <input type="submit" value="Subscribe">
+            <hr/>
+            <ul class="list-inline">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </ul>
+            <hr/>
+            <p class="copyright">Copyright @Bhakti Patel</p>
+        </nav>
+    </div>
+    
+<!-- Footer Ends -->
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>
+</style>
+</head>
+<body>
+

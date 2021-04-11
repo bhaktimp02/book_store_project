@@ -1,0 +1,86 @@
+
+  {% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+	<title>Book House 📚🏠</title>
+</head>
+<body>
+
+<!-- Logo Starts -->
+	<nav class="navbar navbar-expand-sm">
+		<!-- Brand/logo -->
+  		<img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85">
+  	</nav>
+<!-- Logo Ends -->
+
+
+<!-- Registartion Form Starts--> 
+  	<div class="container">
+
+  		<h2>Register</h2><br>
+
+		<form action = "" method = "post">
+
+			{% csrf_token %}
+
+			<!--First Name-->
+		  	<label for="FirstName">First Name:</label>
+			<input type="FirstName" name="FirstName" placeholder="First Name"><br><br>
+
+			<!--Last Name-->
+			<label for="LastName">Last Name:</label>
+			<input type="LastName" name="LastName" placeholder="Last Name"><br><br>
+
+			<!--Username-->
+			<label for="UserName">Username:</label>
+			<input type="UserName" name="UserName" placeholder="User Name"><br><br>
+
+			<!--Password-->
+			<label for="PassWord">Password:</label>
+			<input type="PassWord" name="PassWord" placeholder="Password"><br><br>
+
+			<!--Save Button-->
+			<br>
+			<input type="submit" value="Register">
+
+		</form>
+	</div>
+<!-- Registartion Form Ends-->                
+
+
+<!-- Footer Starts -->                
+    <div class="container">
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-secondary">                     
+            <h2>Contact</h2>
+            <div class="b"> 123 Main St Newyork NY 12345  
+            </div>
+            <hr/>           
+            <input type="text" placeholder="Email address" name="mail" required>
+            <input type="submit" value="Subscribe">
+            <hr/>
+            <ul class="list-inline">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </ul>
+            <hr/>
+            <p class="copyright">Copyright @Bhakti Patel</p>
+        </nav>
+    </div>
+<!-- Footer Ends-->                
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>
