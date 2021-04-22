@@ -1,5 +1,5 @@
 
-  {% load static %}
+{% load static %}
 
 <!DOCTYPE html>
 <html>
@@ -18,22 +18,22 @@
 <!-- Logo Starts -->
 	<nav class="navbar navbar-expand-sm">
 		<!-- Brand/logo -->
-  		<img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85">
+  		<a href="/book-store"><img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85"></a>
   	</nav>
 <!-- Logo Ends -->
 
-
+<div class="container-fluid">
 <!-- Registartion Form Starts--> 
   	<div class="container">
 
-  		<h2>Register</h2><br>
+  		<h2>Sign Up</h2><br>
 
 		<form action = "" method = "post">
 
 			{% csrf_token %}
 
 			<!--First Name-->
-		  	<label for="FirstName">First Name:</label>
+		  <label for="FirstName">First Name:</label>
 			<input type="FirstName" name="FirstName" placeholder="First Name"><br><br>
 
 			<!--Last Name-->
@@ -45,37 +45,49 @@
 			<input type="UserName" name="UserName" placeholder="User Name"><br><br>
 
 			<!--Password-->
-			<label for="PassWord">Password:</label>
-			<input type="PassWord" name="PassWord" placeholder="Password"><br><br>
+			<label for="PassWord1">Password:</label>
+			<input type="PassWord1" name="PassWord1" placeholder="Password1"><br><br>
+
+      <label for="PassWord2">Confirm Password:</label>
+      <input type="PassWord2" name="PassWord2" placeholder="Password2"><br><br>
 
 			<!--Save Button-->
-			<br>
-			<input type="submit" value="Register">
-
+			<button type="submit">Sign Up</button> 
+      <button class="button"><a href="/book-store">Go Back</a></button>
+           
 		</form>
 	</div>
 <!-- Registartion Form Ends-->                
 
 
 <!-- Footer Starts -->                
-    <div class="container">
-        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-secondary">                     
-            <h2>Contact</h2>
-            <div class="b"> 123 Main St Newyork NY 12345  
+  <div class="container-fluid">
+    <div class = "row border bg-secondary">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <h3>Contact Us</h3>
+            <div class="list-group">
+              <p>111 New St</p>
+              <p>New York NY 1234</p>
             </div>
-            <hr/>           
-            <input type="text" placeholder="Email address" name="mail" required>
-            <input type="submit" value="Subscribe">
-            <hr/>
-            <ul class="list-inline">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </ul>
-            <hr/>
-            <p class="copyright">Copyright @Bhakti Patel</p>
-        </nav>
+      </div>
+  <!--Email Sunscribe-->
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <input type="text" placeholder="Email address" name="mail" required>
+        <input type="submit" value="Subscribe">
+      </div>
+  <!--Contact Us-->
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <ul class="list-inline">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </ul>
+      </div>
+      <hr/>
+      <p class="copyright">Copyright @Bhakti Patel</p>
     </div>
+    </div>
+</div>
 <!-- Footer Ends-->                
 
 

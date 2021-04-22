@@ -23,17 +23,19 @@
 </head>
 
 <body>
+<form action="" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
 
 <div class="container-fluid">
 
 
 <!-- Header -->
 <div class="topnav">
-  <img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85">
+  <a href="/book-store"><img alt="" src="https://i.pinimg.com/564x/8c/64/69/8c64695ea89ddb51f9b53fa9dfe315e3.jpg" width="85"></a>
   <div class="topnav-right">
-    <a href="/book-store/signin">Sign In</a>
-    <a href="/book-store/register">Sign Up</a>
-    <a href="#">Cart 🛒</a>
+    <h3>Welcome {{user_name}}</h3>
+     <a href="/book-store">Sign Out</a>
   </div>
 </div>
 <!--Header Ends-->
@@ -43,7 +45,7 @@
   <a href="#">Store</a>
   <a href="#">Blog</a>
   <div class="search-container">
-    <form action="">
+    
       <input type="text" placeholder="Search.." name="search">
       <button type="submit">Submit</i></button>
     </form>
