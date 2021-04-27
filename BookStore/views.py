@@ -32,8 +32,8 @@ def signin(request):
 			# user = authenticate(username=login_name, password=login_password)
 			print(user, "HERERERRE")
 			if user.PassWord1 == login_password:
-				return HttpResponse("Welcome User!")
-				# return render(request, 'BookStore/home.html')
+				# return HttpResponse("Welcome User!")
+				return render(request, 'BookStore/userpage.html')
 			else:
 				return HttpResponse("User password doesn't match!")
 				# return render(request, 'BookStore/userpage.html')
