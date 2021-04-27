@@ -7,6 +7,7 @@ from .forms import UserInfoForm
 
 from django.views import View
 
+from django.contrib.auth import authenticate
 # Create your views here.
 
 # Home Page View
@@ -17,6 +18,28 @@ def home(request):
 
 #Sign In View
 def signin(request):
+	form = UserInfoForm(request.POST)
+	if request.method == "POST":
+		login_name = request.POST.get('UserName')
+		login_password = request.POST.get('PassWord')
+		print(login_name)
+		print(login_password)
+		username = UserInfo.objects.get(UserName=login_name)
+		password = UserInfo.objects.get(PassWord1 = login_password)
+		print(username)
+		#print(password)
+		# user = authenticate(username= login_name, password=login_password)
+		# print(username)
+		if username == 'bp':
+			return HttpResponse("Welcome User")
+			# return render(request, 'BookStore/home.html')
+		else:
+			return HttpResponse("User not found")
+			# return render(request, 'BookStore/userpage.html')
+			
+			
+	# else:
+		# return render(request, 'BookStore/userpage.html')
 	template = loader.get_template('BookStore/signin.html')
 	return HttpResponse(template.render({},request))
 
@@ -37,6 +60,12 @@ def register(request):
 	}
 	template = loader.get_template('BookStore/register.html')
 	return HttpResponse(template.render(context,request))
+
+
+
+
+
+
 
 
 
