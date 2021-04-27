@@ -24,19 +24,22 @@ def signin(request):
 		login_password = request.POST.get('PassWord')
 		print(login_name)
 		print(login_password)
-		username = UserInfo.objects.get(UserName=login_name)
-		password = UserInfo.objects.get(PassWord1 = login_password)
-		print(username)
-		#print(password)
-		# user = authenticate(username= login_name, password=login_password)
-		# print(username)
-		if username == 'bp':
-			return HttpResponse("Welcome User")
-			# return render(request, 'BookStore/home.html')
-		else:
-			return HttpResponse("User not found")
-			# return render(request, 'BookStore/userpage.html')
-			
+		# username = UserInfo.objects.get(UserName=login_name)
+		try:
+			user = UserInfo.objects.get(UserName=login_name)
+			# print(username)
+			# print(query_password)
+			# user = authenticate(username=login_name, password=login_password)
+			print(user, "HERERERRE")
+			if user.PassWord1 == login_password:
+				return HttpResponse("Welcome User!")
+				# return render(request, 'BookStore/home.html')
+			else:
+				return HttpResponse("User password doesn't match!")
+				# return render(request, 'BookStore/userpage.html')
+		except Exception as error:
+			return HttpResponse("User not found!")
+				
 			
 	# else:
 		# return render(request, 'BookStore/userpage.html')
